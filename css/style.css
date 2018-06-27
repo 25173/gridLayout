@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
+
+html, body, h3{
+  padding: 0;
+  margin: 0;
+  font-family: Montserrat;
+}
+
+header{
+  padding: 2em;
+}
+
+header, aside{
+  background-color: rgba(188,255,220,0.5);
+}
+h1, .tagline{color: #47a}
+
+h1, h3{
+  font-family: Montserrat;
+}
+
+section{
+  display: grid;
+  grid-template-columns: auto 1fr;
+  padding-bottom: .2em;
+}
+
+.number {
+  background-color: #47a;
+  color: #fff;
+  font-size: 3em;
+  width: 1.2em;
+  text-align: right;
+  padding:.2em;
+}
+
+article{
+  padding: 1em;
+}
+
+section img{
+  max-width: 100%;
+}
+
+aside ul{
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+aside h3{
+  padding: 2em ;
+  color: #fff;
+  background-color: #47a;
+}
+aside a {
+  text-decoration: none;
+  padding: 2em ;
+  display: block;
+}
+
+aside a:hover{
+  color: #fff;
+  background-color: #47a;
+}
+
+footer{
+  background-color: #333;
+  color: #eee;
+  padding: 2em;
+}
+
+@media screen and (min-width: 760px){
+  .afb{
+    display: block;
+    background-image: url("http://static.2018.lowlands.fabriquehq.nl/static/images/stills/Lowlands_HomepageAnimatie_poster.png");
+    background-size: cover;
+    background-position: center center;
+  }
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "kop kop"
+    "t1 t2"
+    "t3 t4"
+    "t3 t5"
+    "afb t6"
+    "afb t7"
+    "t8 aside"
+    "t9 aside"
+    "voet voet";
+  }
+  header{grid-area: kop;}
+  .negeren{ grid-area: t1;}
+  .drank{ grid-area: t2;}
+  .eten{grid-area: t3}
+  .verkleden{grid-area: t4;}
+  .douchen{grid-area: t5;}
+  .muntjes{grid-area: t6;}
+  .lief{grid-area: t7;}
+  .maatregelen {grid-area: t8;}
+  .artiest{ grid-area: t9;}
+  .afb { grid-area: afb;}
+  aside{grid-area: aside;}
+  footer{ grid-area: voet;}
+
+  h1{
+    font-size: 2.5em;
+  }
+
+
+  .nergeren_artice{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nergeren_artice h3{grid-column: span 2}
+  footer{
+    display: grid;
+    grid-template-columns: 1fr auto;
+  }
+}
+
+@media screen and (min-width: 1000px){
+  .wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas: "kop kop kop"
+    "t1 t2 afb"
+    "t3 t4 afb"
+    "t3 t5 afb"
+    "t6 t7 t8"
+    "t9 t9 aside"
+    "voet voet voet";
+  }
+}
